@@ -1,6 +1,6 @@
 requests
 flask
-google-auth
 gspread
+google-auth
 scikit-learn
 numpy
