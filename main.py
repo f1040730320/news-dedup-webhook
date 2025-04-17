@@ -15,3 +15,5 @@ def webhook():
     except Exception as e:
         print("❌ 錯誤：", str(e))
         return jsonify({"error": str(e)}), 500
+print("📥 headers:", request.headers)
+print("📩 raw body:", request.data)
