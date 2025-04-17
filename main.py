@@ -8,15 +8,10 @@ app = Flask(__name__)
 @app.route("/webhook", methods=["POST"])
 def webhook():
     try:
-        print("📥 headers:", dict(request.headers))  # ✅ 放進來
-        print("📩 raw body:", request.data)          # ✅ 放進來
-
+        print("✅ Webhook endpoint triggered!")  # ← 檢查 Flask 是否有進來
         data = request.get_json()
         print("✅ 收到資料：", data)
-
-        # 處理邏輯...
         return jsonify({"status": "ok"}), 200
-
     except Exception as e:
         print("❌ 錯誤：", str(e))
         return jsonify({"error": str(e)}), 500
