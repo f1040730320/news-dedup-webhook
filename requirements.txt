@@ -1,2 +1,6 @@
 requests
-feedparser
+flask
+google-auth
+gspread
+scikit-learn
+numpy
